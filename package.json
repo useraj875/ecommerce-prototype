@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@paypal/react-paypal-js": "^8.9.2",
-    "@prisma/client": "^7.3.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "decimal.js": "^10.6.0",
@@ -23,16 +22,21 @@
     "zustand": "^5.0.11"
   },
   "devDependencies": {
+    "@prisma/client": "^6.0.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
-    "prisma": "^7.3.0",
+    "prisma": "^6.0.0",
     "shadcn": "^3.8.4",
     "tailwindcss": "^4",
+    "ts-node": "^10.9.2",
     "tw-animate-css": "^1.4.0",
     "typescript": "^5"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   }
 }
